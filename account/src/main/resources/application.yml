@@ -1,0 +1,20 @@
+server:
+  port: 8101
+
+# spring的配置
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  # 数据源
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/yunpan?characterEncoding=utf8&serverTimezone=UTC
+    username: root
+    password: root
+  application:
+    name: account
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        group: DEFAULT_GROUP
+        username: nacos # 用户名
+        password: nacos # 密码

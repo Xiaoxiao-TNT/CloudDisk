@@ -1,0 +1,4 @@
+# Project exclude paths
+/account/target/
+/api/target/
+/hadoop/target/

@@ -1,0 +1,18 @@
+
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        service: hadoop-provider # 默认取的是应用程序名称spring.application.name，配置了service就以service的值为准
+    # 配置服务所在命名空间，默认为public
+        namespace: public
+    # 配置服务所在组，默认的就是DEFAULT_GROUP
+        group: DEFAULT_GROUP # 不支持不同分组的服务之间的调用
+
+  # 开启nacos认证后需要配置用户名和密码
+        username: nacos # 用户名
+        password: nacos # 密码
+server:
+  port: 8081
